@@ -1,0 +1,7 @@
+#!/bin/bash
+#read $1
+#echo $1
+perl -pe 's/\d+/localtime($&)/e' /logs/squid/$1 | tr -s " "| cut -d " " -f 2,3,4,8,12
+
+#tail -f /logs/squid/$1| perl -pe 's/\d+/localtime($&)/e'  | tr -s " "| cut -d " " -f 2,3,4,8,12
+
